@@ -444,11 +444,11 @@ p{
 /* Mobile device */
 @media  only screen and (max-width:850px){
     .header{
-        width: 90vw;
+        width: 100vw;
         height: 100vh;
         background-image: url(./d5.jpg);
         background-repeat: no-repeat;
-        background-size: 100% 100%;
+        background-size: 100% 80%;
         background-position: center;
         display: flex;
     }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>发送邮件页面</title>
+    <link rel="stylesheet" href="0402.css">
+</head>
+<body>
+    <div class="container">
+        <h1>发送邮件</h1>
+        <form id="emailForm" action="mailto:rewqaass@gmail.com" method="post" enctype="text/plain">
+            <label for="subject">主题:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">消息:</label>
+            <textarea id="message" name="message" rows="10" required></textarea>
+
+            <button type="submit">发送</button>
+        </form>
+    </div>
+</body>
+</html>

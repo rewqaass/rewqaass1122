@@ -1,0 +1,598 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+a{
+    color: inherit; /* 使链接颜色继承父元素的颜色 */
+    text-decoration: none;
+}
+/* Navbar */
+.navbar{
+    background-color: gray;
+    position:fixed;
+    display: flex;
+    top: 0px;
+    left: 0px;
+    justify-content: space-between;
+    padding: 20px;
+    width: 100%;
+    color: whitesmoke;
+    z-index: 666666;
+    opacity: 0.8;
+    }
+.nav-links{
+    display: flex;
+    align-items: center;
+}
+.nav-links li{
+    font-size: 20px;
+    margin: 0 30px;
+}
+.shadow{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.logo{
+    display: flex;
+    flex-direction: column;
+}
+.logo1{
+    font-size: 10px;
+    font-weight: bold;
+}
+.logo2{
+    font-size: 30px;
+    font-weight: bold;
+}
+header{
+    width: 90vw;
+    height: 100vh;
+    background-image: url(./d5.jpg);
+    background-repeat: no-repeat;
+    background-size: 60% 100%;
+    background-position: center;
+    display: flex;
+}
+
+ul{
+   list-style: none; 
+}
+ul :hover{
+    opacity: 0.5;
+}
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+    background-color: black;
+    font-family: "Noto Serif JP", serif;
+}
+
+.menu-btn{
+    
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Events */
+.events{
+    justify-content:space-around;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    flex: 1;
+}
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+.title{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+    text-align: center;
+    font-size: 4vmin;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.title h1{
+    color: whitesmoke;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 确保子元素在垂直方向上居中对齐 */
+    flex-grow: 1;
+    margin: 20px auto;
+    height: auto; /* 确保父容器高度自适应内容 */
+}
+
+
+.col img{
+    max-width: 100%;
+    height: auto;
+    object-fit: contain; /* 添加了这一行，确保图片填充指定的尺寸 */
+    margin-bottom: 20px; /* 添加了这一行，统一外边距 */
+}
+
+h4{
+    color: whitesmoke;
+    margin-top: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+p{
+    color: whitesmoke;
+    padding: 0 40px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+.explore{
+   display: flex;
+   flex-direction: row;
+   width: 100vw;
+   height: 100vh;
+   justify-content: space-around;
+   align-items: center;
+   margin: 0;
+   padding: 0;
+   
+}
+
+.explore img{
+    flex: 1;
+    width: 33%;
+    height: 75%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    margin: 0;
+    padding: 0;
+}
+
+
+.content-col{
+    width: 40%;
+}
+
+.container{
+    position:relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.slider-title {
+    font-size: 3em; /* 调整字体大小 */
+    color: whitesmoke;
+    text-align: center;
+    margin-bottom: 20px; /* 标题和幻灯片之间的间距 */
+    font-weight: bold; /* 字体加粗 */
+}
+.slider{
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    border-radius: 20px;
+}
+.slider .slides{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 240px;
+    height: 320px;
+    background: var(--img);
+    background-position: center;
+    background-size: cover;
+    transition: 0.5s;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px gray(0,0,0,0,5);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+.slider .slides:nth-child(1),
+.slider .slides:nth-child(2){
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(0);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0);
+  background-size: cover;
+}
+.slider .slides:nth-child(3){
+  left: calc(50% + 240px);
+  background-size: cover;
+}
+.slider .slides:nth-child(4){
+  left: calc(50% + 500px);
+  background-size: cover;
+}
+.slider .slides:nth-child(5){
+  left: calc(50% + 760px);
+  background-size: cover;
+}
+.slider .slides:nth-child(6){
+  left: calc(50% + 1020px);
+  background-size: cover;
+  opacity: 0;
+}
+.buttons{
+    position: absolute;
+    bottom: 15px;
+    display: flex;
+    gap: 20px;
+  }
+  .buttons span{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #111;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .buttons span::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-top: 4px solid #fff;
+    border-left: 4px solid #fff;
+    transform: rotate(315deg) translate(2px,2px);
+  }
+  .buttons span:nth-child(2)::before
+  {
+    transform: rotate(135deg) translate(2px,2px);
+  }
+ .buttons span:active{
+    opacity: 0.5;
+ }
+ .content{
+    position: relative;
+    padding: 40px;
+    max-width: 600px;
+    transition: 0.25;
+    transition-delay: 0s;
+    transform: translateY(40px);
+    z-index: 1000000;
+    opacity: 0;
+ }
+ .content h2{
+    font-size: 4em;
+    color: #fff;
+    justify-content: center;
+ }
+ .content p{
+    color: #fff;
+    justify-content: center;
+ }
+.slider .slides:nth-child(1) .content,
+.slider .slides:nth-child(2) .content{
+    opacity:0 ;
+    transform: translateY(0px);
+    transition-delay: 0.5s;
+}
+.access{
+    display: flex;
+    gap: 50px;
+}
+.access h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 3em;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+}
+
+ .access h2{
+    text-align: center;
+ }
+ 
+
+ .form-section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.map{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+}
+
+.store{
+    justify-content: center;
+    align-items: center;
+}
+
+.store {
+    margin-bottom: 30px;
+}
+
+.store h2 {
+    width: 100%;
+    margin-right: 200px;
+    color: whitesmoke;
+    font-size: 35px;
+}
+
+.store p {
+    width: 100%;
+    color: whitesmoke;
+    margin: 5px 0;
+    justify-content: center;
+    font-size: 25px;
+}
+
+
+
+.image-section, .map-section {
+    display: flex;
+    width: 48%;
+}
+
+.image-section img {
+    width: 200%;
+    height: 400px;
+    border-radius: 8px;
+}
+
+.map-section iframe {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 8px;
+    right: 50px;
+}
+/* 滚动效果 */
+.flag {
+    opacity: 0;
+    filter: blur(5px);
+    transition: all 1s;
+    transform: translateX(-100%);
+  }
+  
+  .active22 {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+  }
+
+  .footer {
+    background-color: #f8f8f8;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h4 {
+    color:black;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile device */
+@media  only screen and (max-width:850px){
+    .menu-btn{
+        display: block;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .nav-links{
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        justify-content: center;
+        background: #000;
+        margin-top: -900px;
+        transition: all 0.5s ease;
+    }
+    .mobile-menu{
+        margin-top: 0px;
+        border-bottom-right-radius: 30%;
+    }
+    .nav-links li{
+        margin: 30px auto;
+    }
+    .events {
+        flex-direction: column; /* 垂直排列子元素 */
+        align-items: center; /* 确保在小屏幕上居中对齐 */
+    }
+
+    .title {
+        order: 1; /* 确保标题在第一位 */
+        font-size: 5vmin; /* 调整手机尺寸下的字体大小 */
+        margin-bottom: 20px;
+    }
+
+    .col {
+        order: 2; /* 确保第一个col在第二位 */
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 确保在小屏幕上居中对齐 */
+        justify-content: flex-start; /* 确保子元素在垂直方向上顶部对齐 */
+        width: 100%; /* 确保父容器在小屏幕上占满宽度 */
+    }
+
+    .col + .col {
+        order: 3; /* 确保第二个col在第三位 */
+    }
+
+    .img-container {
+        width: 90%; /* 调整图片容器在小屏幕上的宽度 */
+        height: 200px; /* 调整高度为200px */
+    }
+
+    .title h1 {
+        font-size: 5vmin; /* 调整title的字体大小 */
+    }
+
+    h4 {
+        font-size: 4vmin; /* 调整h4的字体大小 */
+    }
+
+    p {
+        font-size: 3vmin; /* 调整p的字体大小 */
+        padding: 0 20px; /* 调整手机尺寸下的padding */
+    }
+/* explore */
+.explore {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 使用网格布局 */
+        gap: 10px;
+        width: 90%;
+        height: auto; /* 允许高度自适应内容 */
+        margin: 20px auto;
+    }
+.explore h2{
+    top: 0;
+}    
+    .explore img {
+        width: 100%;
+        height: auto; /* 确保高度自适应 */
+        object-fit: cover;
+    }
+/* Animations */
+img{
+    transition: transform .3s ease;
+}
+img:hover{
+    transform: scale(1.1);
+}
+.slider{
+    position: absolute;
+    inset: 100px 100px 200px 40px;
+}
+.slider .slides{
+    width: 100px;
+    height: 100px;
+    top:initial;
+    bottom: -200px;
+    box-shadow: 0 10px 50px rgba(0,0,0, 5);
+}
+.slider .slides:nth-child(1),
+.slider .slides:nth-child(2){
+    top: initial;
+    bottom: 0px;
+}
+.slider .slides:nth-child(3){
+    left: 0px;
+}
+.slider .slides:nth-child(4){
+    left: 120px;
+}
+.slider .slides:nth-child(5){
+    left: 240px;
+}
+.slider .slides:nth-child(6){
+    left: 360px;
+}
+.map-info {
+    flex-direction: column;
+}
+
+.content-section {
+    flex-direction: column;
+    gap: 20px;
+}
+
+.image-section, .map-section {
+    width: 100%;
+    height: auto;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer-container{
+    display: flex;
+    flex-direction: column;
+}
+}
+
+    
+
+    
+
+
+

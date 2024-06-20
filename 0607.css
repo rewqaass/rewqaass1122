@@ -445,7 +445,7 @@ p{
 @media  only screen and (max-width:850px){
     .header{
         width: 100vw;
-        height: 90vh;
+        height: 80vh;
         background-image: url(./d5.jpg);
         background-repeat: no-repeat;
         background-size: 100% 80%;

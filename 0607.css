@@ -171,7 +171,7 @@ p{
 .container{
     position:relative;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -445,7 +445,7 @@ p{
 @media  only screen and (max-width:850px){
     .header{
         width: 100vw;
-        height: 100vh;
+        height: 90vh;
         background-image: url(./d5.jpg);
         background-repeat: no-repeat;
         background-size: 100% 80%;

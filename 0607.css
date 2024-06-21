@@ -154,7 +154,7 @@ p{
 
 .explore img{
     flex: 1;
-    width: 66%;
+    width: 33%;
     height: 75%;
     margin: 0;
     padding: 0;
@@ -541,7 +541,7 @@ p{
     .explore img {
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 43%;
         height: 50%; /* 确保高度自适应 */
         object-fit: cover;
         margin-left: 70px;

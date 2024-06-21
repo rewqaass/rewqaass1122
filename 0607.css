@@ -456,7 +456,18 @@ p{
         display: block;
     }
     .navbar{
-        padding: 0;
+        background-color: gray;
+        position:fixed;
+        display: flex;
+        top: 0px;
+        left: 0px;
+        justify-content: space-between;
+        padding: 20px;
+        width: 100%;
+        color: whitesmoke;
+        z-index: 666666;
+        opacity: 0.8;
+        height: 100px;
     }
     .logo{
         position: absolute;
